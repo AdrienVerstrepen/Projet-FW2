@@ -9,7 +9,7 @@ L'**ACNH** ou l'**Archive des Collectibles Nouvellemment Homologués** est une p
 Ici vous pourrez garder une trace de l'avancée de vos collections : 
 - 🐡 Poissons
 - 🦴 Fossiles
-- 🎨 Œuvres
+- 🎨 Œuvres d'art
 - 🐞 Insectes
 
 Vous pouvez également suivre une wishlist qui contient les éléments que vous souhaitez obtenir prochainement.
