@@ -1,13 +1,17 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import DistroCard from '@/components/DistroCard.vue'
-import DistroList from '@/components/DistroList.vue'
 import Home from '@/views/Home.vue'
 import NotFound from '@/components/NotFound.vue'
+import ItemCard from '@/components/ItemCard.vue'
+import ItemList from '@/views/ItemList.vue'
+import ItemListByCategory from '@/views/ItemListByCategory.vue'
+import Wishlist from '@/components/Wishlist.vue'
 
 const routes = [
   { path: '/', name: 'root', component: Home },
-  { path: '/distros', name: 'Distributions', component: DistroList },
-  { path: '/distro/:name', name: 'Distribution', component: DistroCard },
+  { path: '/items', name: 'items', component: ItemList },
+  { path: '/items/:category', name: 'itemsByCategory', component: ItemListByCategory },
+  { path: '/items/:id', name: 'item', component: ItemCard },
+  { path: '/wishlist', name: 'wishlist', component: Wishlist },
   { path: '/:pathMatch(.*)*', name: '404', component: NotFound },
 ]
 

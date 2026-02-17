@@ -1,8 +1,23 @@
 <script setup></script>
 
 <template>
-  <router-link to="/">Accueil</router-link> // Génère les liens pour la navigation
+  <nav class="navbar">
+    <router-link to="/" class="navlink">Accueil</router-link>
+    <router-link to="/wishlist" class="navlink">Accueil</router-link>
+    <router-link to="/items" class="navlink">Accueil</router-link>
+    <router-link to="/test" class="navlink">Accueil</router-link>
+  </nav>
   <router-view/>
 </template>
 
-<style scoped></style>
+<style scoped>
+  .navbar {
+    display:flex;
+    flex-direction: row;
+  }
+
+  .navlink {
+    font-size: larger;
+  }
+
+</style>
