@@ -1,2 +1,4 @@
-# FinancesTracker-FW2
-Le but de ce projet est de fournir un outil permettant de faciliter le suivi de ses finances, sa gestion de budget et sa comptabilité.
+# DistroDex
+Le but de ce projet est de fournir une base de recherche parmi les distributions linux ainsi que diverses informations les concernant.
+
+
