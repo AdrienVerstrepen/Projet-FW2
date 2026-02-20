@@ -2,6 +2,7 @@
 import FishList from './FishList.vue';
 import BugList from './BugList.vue';
 import FossilList from './FossilList.vue';
+import GyroidList from './GyroidList.vue';
 
 </script>
 
@@ -19,6 +20,10 @@ import FossilList from './FossilList.vue';
         Fossils - fossiles
     </h2>
     <FossilList></FossilList>
+    <h2>
+        Gyroids
+    </h2>
+    <GyroidList></GyroidList>
 </template>
 
 <style scoped></style>

@@ -2,19 +2,21 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from '@/views/Home.vue'
 import NotFound from '@/components/NotFound.vue'
 import ItemCard from '@/components/ItemCard.vue'
-import ItemList from '@/views/ItemList.vue'
+import ItemList from '@/views/Lists/ItemList.vue'
 import ItemListByCategory from '@/views/ItemListByCategory.vue'
 import Wishlist from '@/components/Wishlist.vue'
 
+import FishList from '@/views/Lists/FishList.vue'
+import SingleFish from '@/views/Singletons/SingleFish.vue'
 
-import FishList from '@/views/FishList.vue'
-import SingleFish from '@/views/SingleFish.vue'
+import BugList from '@/views/Lists/BugList.vue'
+import SingleBug from '@/views/Singletons/SingleBug.vue'
 
-import BugList from '@/views/BugList.vue'
-import SingleBug from '@/views/SingleBug.vue'
+import FossilList from '@/views/Lists/FossilList.vue'
+import SingleFossil from '@/views/Singletons/SingleFossil.vue'
 
-import FossilList from '@/views/FossilList.vue'
-import SingleFossil from '@/views/SingleFossil.vue'
+import GyroidList from '@/views/Lists/GyroidList.vue'
+import SingleGyroid from '@/views/Singletons/SingleGyroid.vue'
 
 const routes = [
   { path: '/', name: 'root', component: Home },
@@ -26,6 +28,9 @@ const routes = [
 
   { path: '/fossils', name: 'fossils', component: FossilList},
   { path: '/fossil/:name', name: 'fossil', component: SingleFossil},
+  
+  { path: '/gyroids', name: 'gyroids', component: GyroidList},
+  { path: '/gyroid/:name', name: 'gyroid', component: SingleGyroid},
 
   { path: '/items', name: 'items', component: ItemList },
   { path: '/items/:category', name: 'itemsByCategory', component: ItemListByCategory },
