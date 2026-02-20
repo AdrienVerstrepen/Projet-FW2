@@ -5,7 +5,7 @@
   This super duper website is here to help you complete your ACNH collections.
   <br>
   <br>
-  Feel free to star the project on github : 
+  Feel free to star the project on github : https://github.com/AdrienVerstrepen/ACNH
 </template>
 
 <style scoped></style>

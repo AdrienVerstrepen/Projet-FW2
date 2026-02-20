@@ -18,6 +18,9 @@ import SingleFossil from '@/views/Singletons/SingleFossil.vue'
 import GyroidList from '@/views/Lists/GyroidList.vue'
 import SingleGyroid from '@/views/Singletons/SingleGyroid.vue'
 
+import ArtList from '@/views/Lists/ArtList.vue'
+import SingleArt from '@/views/Singletons/SingleArt.vue'
+
 const routes = [
   { path: '/', name: 'root', component: Home },
   { path: '/fishes', name: 'fishes', component: FishList},
@@ -31,6 +34,9 @@ const routes = [
   
   { path: '/gyroids', name: 'gyroids', component: GyroidList},
   { path: '/gyroid/:name', name: 'gyroid', component: SingleGyroid},
+
+  { path: '/arts', name: 'arts', component: ArtList},
+  { path: '/art/:name', name: 'art', component: SingleArt},
 
   { path: '/items', name: 'items', component: ItemList },
   { path: '/items/:category', name: 'itemsByCategory', component: ItemListByCategory },
