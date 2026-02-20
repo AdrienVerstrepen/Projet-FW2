@@ -1,7 +1,5 @@
 <script setup>
-import { ref, onMounted } from 'vue'
-
-const imageUrl = 'https://cataas.com/cat'
+const imageUrl = 'https://http.cat/404.jpg'
 </script>
 
 <template>

@@ -5,9 +5,13 @@ import ItemCard from '@/components/ItemCard.vue'
 import ItemList from '@/views/ItemList.vue'
 import ItemListByCategory from '@/views/ItemListByCategory.vue'
 import Wishlist from '@/components/Wishlist.vue'
+import FishList from '@/views/FishList.vue'
+import FishCard from '@/components/FishCard.vue'
 
 const routes = [
   { path: '/', name: 'root', component: Home },
+  { path: '/fishes', name: 'fishes', component: FishList},
+  { path: '/fish/:id', name: 'fish', component: FishCard},
   { path: '/items', name: 'items', component: ItemList },
   { path: '/items/:category', name: 'itemsByCategory', component: ItemListByCategory },
   { path: '/items/:id', name: 'item', component: ItemCard },
