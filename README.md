@@ -38,6 +38,24 @@ A wishlist feature is also available to help you keep track of the items you are
 
 ### Local
 
+First, get the source code : 
+```sh
+git clone https://github.com/AdrienVerstrepen/ACNH.git
+```
+
+Then, install the dependancies : 
+```
+cd ./ACNH
+npm i 
+```
+
+Once the deps are installed, configure your .env with your [Nookipedia API](https://api.nookipedia.com/) key.
+
+After that, you'll be ready to go :
+```
+npm run dev
+```
+
 ## 📄 Documentation
 
 ### Structure
