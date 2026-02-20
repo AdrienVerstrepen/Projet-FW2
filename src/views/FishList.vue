@@ -24,10 +24,10 @@ onMounted(() => {
     getAllFishes()
 })
 
-const getFishDetails = (number) => {
+const getFishDetails = (fishName) => {
     router.push({
         name: 'fish',
-		params: { id: number },
+		params: { name: fishName },
     })
 }
 
@@ -36,8 +36,8 @@ const getFishDetails = (number) => {
 <template>
     <div v-for="fish in fishes" :key="fish.number">
         <CardContainer>
-            <FishCard :name="fish.name" :id="fish.number" :rarity="fish.rarity" :location="fish.location"></FishCard>
-            <button @click="getFishDetails(fish.number)">More informations !</button>
+            <FishCard :name="fish.name" :number="fish.number" :rarity="fish.rarity" :location="fish.location" :imgUrl="fish.image_url"></FishCard>
+            <button @click="getFishDetails(fish.name)">More informations !</button>
         </CardContainer>
     </div>
 </template>

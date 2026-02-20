@@ -1,19 +1,20 @@
 <script setup>
 import { defineProps } from 'vue'
-import CardContainer from './CardContainer.vue'
 
 defineProps({
     name: String,
-    id: Number,
+    number: Number,
     location: String,
     rarity: String,
+    imgUrl: String,
 })
 
 </script>
 <template>
     <div>
+        <img :src="imgUrl">
         <strong> {{ name }} </strong>
-        {{ id }}
+        #{{ number }}
         {{ location }}
         {{  rarity }}
     </div>
