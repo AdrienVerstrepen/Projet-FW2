@@ -10,11 +10,15 @@ defineProps({
 </script>
 <template>
     <div>
-        <img :src="imgUrl">
-        <strong> {{ name }} </strong>
-        #{{ number }}
-        {{ location }}
-        {{  rarity }}
+        <div>
+            <img :src="imgUrl">
+        </div>
+        <span><strong> {{ name }} </strong></span>
+        <p>
+            #{{ number }}
+            {{ location }}
+            {{  rarity }}
+        </p>
     </div>
 </template>
 <style scoped>

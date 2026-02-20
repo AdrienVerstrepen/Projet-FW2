@@ -7,7 +7,9 @@ defineProps({
 </script>
 <template>
     <div>
-        <img :src="imgUrl">
+        <div>
+            <img :src="imgUrl">
+        </div>
         <strong> {{ name }} </strong>
     </div>
 </template>

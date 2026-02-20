@@ -34,12 +34,28 @@ const getFossilDetails = (fossilName) => {
 </script>
 
 <template>
-    <div v-for="fossil in fossiles" :key="fossil.number">
-        <CardContainer>
-            <FossilCard :name="fossil.name" :imgUrl="fossil.image_url"></FossilCard>
-            <button @click="getFossilDetails(fossil.name)">More informations !</button>
-        </CardContainer>
+    <div class="grid-container">
+        <div class="item" v-for="fossil in fossiles" :key="fossil.number">
+            <CardContainer>
+                <FossilCard :name="fossil.name" :imgUrl="fossil.image_url"></FossilCard>
+                <button @click="getFossilDetails(fossil.name)">More informations !</button>
+            </CardContainer>
+        </div>
     </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.grid-container {
+        display:grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        justify-content: center;
+        gap: 1em;
+    }
+
+    .item {
+        padding: 1em;
+        color: white;
+        align-content: center;
+        text-align: center;
+    }
+</style>
