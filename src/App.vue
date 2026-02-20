@@ -5,8 +5,8 @@
     <router-link to="/" class="navlink">Accueil</router-link>
     <router-link to="/fishes" class="navlink">Fishes - poissons</router-link>
     <router-link to="/bugs" class="navlink">Bugs - insectes</router-link>
+    <router-link to="/fossils" class="navlink">Fossils - fossiles</router-link>
     <router-link to="/items" class="navlink">All items - tous les objets</router-link>
-    <router-link to="/test" class="navlink">404</router-link>
   </nav>
   <router-view/>
 </template>

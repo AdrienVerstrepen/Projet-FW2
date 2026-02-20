@@ -1,6 +1,7 @@
 <script setup>
 import FishList from './FishList.vue';
 import BugList from './BugList.vue';
+import FossilList from './FossilList.vue';
 
 </script>
 
@@ -14,6 +15,10 @@ import BugList from './BugList.vue';
         Bugs - insectes
     </h2>
     <BugList></BugList>
+    <h2>
+        Fossils - fossiles
+    </h2>
+    <FossilList></FossilList>
 </template>
 
 <style scoped></style>
