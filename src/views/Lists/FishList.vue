@@ -4,6 +4,7 @@ import { useRouter } from 'vue-router'
 import nookipediaClient from '@/api/NookipediaApi'
 import FishCard from '@/components/FishCard.vue'
 import CardContainer from '@/components/CardContainer.vue'
+import ListContainer from '@/components/ListContainer.vue'
 
 const router = useRouter();
 
@@ -34,30 +35,16 @@ const getFishDetails = (fishName) => {
 </script>
 
 <template>
-    <div class="grid-container">
-        <div class="item" v-for="fish in fishes" :key="fish.number">
+    <ListContainer>
+        <div v-for="fish in fishes" :key="fish.number">
             <CardContainer>
                 <FishCard :name="fish.name" :number="fish.number" :rarity="fish.rarity" :location="fish.location" :imgUrl="fish.image_url"></FishCard>
                 <button @click="getFishDetails(fish.name)">More informations !</button>
             </CardContainer>
         </div>
-    </div>
+    </ListContainer>
 
 </template>
 
 <style scoped>
-    .grid-container {
-        display:grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        justify-content: center;
-        gap: 1em;
-    }
-
-    .item {
-        padding: 1em;
-        color: white;
-        align-content: center;
-        text-align: center;
-    }
-
 </style>

@@ -4,6 +4,7 @@ import { useRouter } from 'vue-router'
 import nookipediaClient from '@/api/NookipediaApi'
 import GyroidCard from '@/components/GyroidCard.vue'
 import CardContainer from '@/components/CardContainer.vue'
+import ListContainer from '@/components/ListContainer.vue'
 
 const router = useRouter();
 
@@ -34,28 +35,14 @@ const getGyroidDetails = (gyroidName) => {
 </script>
 
 <template>
-    <div class="grid-container">
-        <div class="item" v-for="gyroid in gyroides" :key="gyroid.number">
+    <ListContainer>
+        <div v-for="gyroid in gyroides" :key="gyroid.number">
             <CardContainer>
                 <GyroidCard :name="gyroid.name" :imgUrl="gyroid.variations[0].image_url"></GyroidCard>
                 <button @click="getGyroidDetails(gyroid.name)">More informations !</button>
             </CardContainer>
         </div>
-    </div>
+    </ListContainer>
 </template>
 
-<style scoped>
-.grid-container {
-        display:grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        justify-content: center;
-        gap: 1em;
-    }
-
-    .item {
-        padding: 1em;
-        color: white;
-        align-content: center;
-        text-align: center;
-    }
-</style>
+<style scoped></style>
