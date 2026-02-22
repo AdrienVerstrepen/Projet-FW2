@@ -4,7 +4,6 @@ import BugList from './BugList.vue';
 import FossilList from './FossilList.vue';
 import GyroidList from './GyroidList.vue';
 import ArtList from './ArtList.vue';
-
 </script>
 
 <template>
