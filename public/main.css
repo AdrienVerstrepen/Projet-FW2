@@ -1,26 +1,12 @@
 :root {
-    --main-bg-color: "";
-    --card-bg-color: #f0ca90;
-    --card-text-color: #5D4037;
-    --title-font: "Valera Round", sans-serif;
-    --text-font: "Hind", sans-serif
+  --main-bg-color: '';
+  --card-bg-color: #f0ca90;
+  --card-text-color: #5d4037;
+  --title-font: 'Valera Round', sans-serif;
+  --text-font: 'Hind', sans-serif;
 }
 
 body {
-    font-family: var(--text-font);
-    background-color: var(--main-bg-color);
+  font-family: var(--text-font);
+  background-color: var(--main-bg-color);
 }
-
-/* 
-Le Vert "Nook" (Logo/Boutons) : #78C8A0
-
-Le Crème "Papier" (Fenêtres/Menus) : #F9F8F0
-
-Le Brun "Texte" (Typographie) : #5D4037
-
-Le Beige "Contour" (Bordures de cartes) : #E8E4C9
-
-Le Bleu "Information" (Bulles) : #91D7E3
-
-Le Rose "Fruit" (Accentuation) : #FF8C94 */
-
