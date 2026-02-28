@@ -1,14 +1,19 @@
-<script setup></script>
+<script setup>
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n()
+
+</script>
 
 <template>
   <nav class="navbar">
-    <router-link to="/" class="navlink">Accueil</router-link>
-    <router-link to="/fishes" class="navlink">Fishes - poissons</router-link>
-    <router-link to="/bugs" class="navlink">Bugs - insectes</router-link>
-    <router-link to="/fossils" class="navlink">Fossils - fossiles</router-link>
-    <router-link to="/gyroids" class="navlink">Gyroids</router-link>
-    <router-link to="/arts" class="navlink">Arts - œuvres d'art</router-link>
-    <router-link to="/items" class="navlink">All items - tous les objets</router-link>
+    <router-link to="/" class="navlink">{{ t('nav.home') }}</router-link>
+    <router-link to="/fishes" class="navlink">{{ t('nav.fishes') }}</router-link>
+    <router-link to="/bugs" class="navlink"> {{ t('nav.bugs') }}</router-link>
+    <router-link to="/fossils" class="navlink"> {{ t('nav.fossils') }} </router-link>
+    <router-link to="/gyroids" class="navlink">{{ t('nav.gyroids') }}</router-link>
+    <router-link to="/arts" class="navlink">{{ t('nav.arts') }}</router-link>
+    <router-link to="/items" class="navlink">{{ t('nav.items') }}</router-link>
   </nav>
   <router-view/>
 </template>
