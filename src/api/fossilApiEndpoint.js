@@ -1,6 +1,6 @@
 import nookipediaClient from '@/api/NookipediaApi'
 
-const getAllFossils = async () => {
+export const getAllFossils = async () => {
 	try {
 		const response = await nookipediaClient.get("/nh/fossils/individuals");
 		response.data.forEach(element => {
@@ -11,7 +11,7 @@ const getAllFossils = async () => {
 	}
 }
 
-const getOneFossil = async (fossilName) => {
+export const getOneFossil = async (fossilName) => {
 	try {
 		const response = await nookipediaClient.get(`/nh/fossils/individuals/${fossilName}`);
 		fossil.value = response.data
@@ -19,5 +19,3 @@ const getOneFossil = async (fossilName) => {
 		console.error('Erreur : ', error)
 	}
 }
-
-export default { getAllFossils, getOneFossil }
