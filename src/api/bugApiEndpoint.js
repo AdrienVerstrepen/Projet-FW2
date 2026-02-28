@@ -17,3 +17,5 @@ const getOneBug = async (bugName) => {
 		console.error('Erreur : ', error)
 	}
 }
+
+export default { getAllBugs, getOneBug }

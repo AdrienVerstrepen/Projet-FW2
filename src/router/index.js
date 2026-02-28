@@ -1,9 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '@/views/Home.vue'
 import NotFound from '@/components/NotFound.vue'
-import ItemCard from '@/components/ItemCard.vue'
 import ItemList from '@/views/Lists/ItemList.vue'
-import ItemListByCategory from '@/views/ItemListByCategory.vue'
 import Wishlist from '@/components/Wishlist.vue'
 
 import FishList from '@/views/Lists/FishList.vue'
@@ -39,8 +37,6 @@ const routes = [
   { path: '/art/:name', name: 'art', component: SingleArt},
 
   { path: '/items', name: 'items', component: ItemList },
-  { path: '/items/:category', name: 'itemsByCategory', component: ItemListByCategory },
-  { path: '/items/:id', name: 'item', component: ItemCard },
   { path: '/wishlist', name: 'wishlist', component: Wishlist },
   { path: '/:pathMatch(.*)*', name: '404', component: NotFound },
 ]

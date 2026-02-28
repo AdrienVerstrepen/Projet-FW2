@@ -1,6 +1,6 @@
 import nookipediaClient from '@/api/NookipediaApi'
 
-const getAllGyroides = async () => {
+const getAllGyroids = async () => {
 	try {
 		const response = await nookipediaClient.get("/nh/gyroids");
 		response.data.forEach(element => {
@@ -20,3 +20,5 @@ const getOneGyroid = async (gyroidName) => {
 		console.error('Erreur : ', error)
 	}
 }
+
+export default { getAllGyroids, getOneGyroid }

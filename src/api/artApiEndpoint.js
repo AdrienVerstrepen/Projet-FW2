@@ -18,3 +18,5 @@ const getOneArt = async (artName) => {
 		console.error('Erreur : ', error)
 	}
 }
+
+export default { getAllArts, getOneArt }

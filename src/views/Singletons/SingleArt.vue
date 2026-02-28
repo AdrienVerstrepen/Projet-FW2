@@ -1,21 +1,12 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
-import nookipediaClient from '@/api/NookipediaApi'
 import ArtCard from '@/components/ArtCard.vue'
+import getOneArt from '@/api/artApiEndpoint'
 
 const route = useRoute();
 
 const art = ref({})
-
-const getOneArt = async (artName) => {
-	try {
-		const response = await nookipediaClient.get(`/nh/art/${artName}`);
-		art.value = response.data
-	} catch (error) {
-		console.error('Erreur : ', error)
-	}
-}
 
 onMounted(() => {
     getOneArt(route.params.name)

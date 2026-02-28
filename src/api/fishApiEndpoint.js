@@ -18,3 +18,5 @@ const getOneFish = async (fishName) => {
 		console.error('Erreur : ', error)
 	}
 }
+
+export default { getAllFishes, getOneFish }
