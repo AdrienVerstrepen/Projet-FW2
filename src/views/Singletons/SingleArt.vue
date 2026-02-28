@@ -2,14 +2,14 @@
 import { ref, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 import ArtCard from '@/components/ArtCard.vue'
-import getOneArt from '@/api/artApiEndpoint'
+import { getOneArt } from '@/api/artApiEndpoint'
 
 const route = useRoute();
 
 const art = ref({})
 
-onMounted(() => {
-    getOneArt(route.params.name)
+onMounted(async () => {
+    art.value = await getOneArt(route.params.name)
 })
 </script>
 

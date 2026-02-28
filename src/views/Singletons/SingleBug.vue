@@ -2,14 +2,14 @@
 import { ref, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 import BugCard from '@/components/BugCard.vue'
-import getOneBug from '@/api/bugApiEndpoint'
+import { getOneBug } from '@/api/bugApiEndpoint'
 
 const route = useRoute();
 
 const bug = ref({})
 
-onMounted(() => {
-    getOneBug(route.params.name)
+onMounted(async () => {
+    bug = await getOneBug(route.params.name)
 })
 </script>
 

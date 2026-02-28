@@ -1,22 +1,26 @@
 import nookipediaClient from '@/api/NookipediaApi'
 
-const getAllArts = async () => {
+export const getAllArts = async () => {
 	try {
 		const response = await nookipediaClient.get("/nh/art");
-		arts.value = response.data
+		return response.data
 	} catch (error) {
-		console.error('Erreur : ', error)
+		if (error.response) {
+			// Erreur serveur
+		} else if (error.request) {
+			// Aucune réponse
+		} else { 
+			// Autre chose
+		}
 	}
 }
 
 
-const getOneArt = async (artName) => {
+export const getOneArt = async (artName) => {
 	try {
 		const response = await nookipediaClient.get(`/nh/art/${artName}`);
-		art.value = response.data
+		return response.data
 	} catch (error) {
 		console.error('Erreur : ', error)
 	}
 }
-
-export default { getAllArts, getOneArt }

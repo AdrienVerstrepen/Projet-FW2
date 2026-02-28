@@ -1,26 +1,17 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
-import nookipediaClient from '@/api/NookipediaApi'
 import ArtCard from '@/components/ArtCard.vue'
 import CardContainer from '@/components/CardContainer.vue'
 import ListContainer from '@/components/ListContainer.vue'
+import { getAllArts } from '@/api/artApiEndpoint'
 
 const router = useRouter();
 
 const arts = ref([])
 
-const getAllArts = async () => {
-	try {
-		const response = await nookipediaClient.get("/nh/art");
-		arts.value = response.data
-	} catch (error) {
-		console.error('Erreur : ', error)
-	}
-}
-
-onMounted(() => {
-    getAllArts()
+onMounted( async () => {
+    arts.value = await getAllArts()
 })
 
 const getArtDetails = (artName) => {

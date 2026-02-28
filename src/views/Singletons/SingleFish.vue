@@ -1,15 +1,15 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
-import getOneFish from '@/api/fishApiEndpoint'
+import { getOneFish } from '@/api/fishApiEndpoint'
 import FishCard from '@/components/FishCard.vue'
 
 const route = useRoute();
 
 const fish = ref({})
 
-onMounted(() => {
-    getOneFish(route.params.name)
+onMounted(async () => {
+    fish = await getOneFish(route.params.name)
 })
 </script>
 

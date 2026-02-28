@@ -1,6 +1,6 @@
 import nookipediaClient from '@/api/NookipediaApi'
 
-const getAllBugs = async () => {
+export const getAllBugs = async () => {
 	try {
 		const response = await nookipediaClient.get("/nh/bugs");
 		bugs.value = response.data
@@ -9,7 +9,7 @@ const getAllBugs = async () => {
 	}
 }
 
-const getOneBug = async (bugName) => {
+export const getOneBug = async (bugName) => {
 	try {
 		const response = await nookipediaClient.get(`/nh/bugs/${bugName}`);
 		bug.value = response.data
@@ -17,5 +17,3 @@ const getOneBug = async (bugName) => {
 		console.error('Erreur : ', error)
 	}
 }
-
-export default { getAllBugs, getOneBug }

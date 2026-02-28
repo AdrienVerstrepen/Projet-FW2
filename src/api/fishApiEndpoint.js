@@ -1,5 +1,5 @@
 import nookipediaClient from '@/api/NookipediaApi'
-const getAllFishes = async () => {
+export const getAllFishes = async () => {
 	try {
 		const response = await nookipediaClient.get("/nh/fish");
 		response.data.forEach(element => {
@@ -10,7 +10,7 @@ const getAllFishes = async () => {
 	}
 }
 
-const getOneFish = async (fishName) => {
+export const getOneFish = async (fishName) => {
 	try {
 		const response = await nookipediaClient.get(`/nh/fish/${fishName}`);
 		fish.value = response.data
@@ -18,5 +18,3 @@ const getOneFish = async (fishName) => {
 		console.error('Erreur : ', error)
 	}
 }
-
-export default { getAllFishes, getOneFish }

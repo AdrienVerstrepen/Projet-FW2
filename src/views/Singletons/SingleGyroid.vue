@@ -1,15 +1,15 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
-import getOneGyroid from '@/api/gyroidApiEndpoint'
+import { getOneGyroid } from '@/api/gyroidApiEndpoint'
 import GyroidCard from '@/components/GyroidCard.vue'
 
 const route = useRoute();
 
 const gyroid = ref({})
 
-onMounted(() => {
-    getOneGyroid(route.params.name)
+onMounted(async () => {
+    gyroid = await getOneGyroid(route.params.name)
 })
 </script>
 

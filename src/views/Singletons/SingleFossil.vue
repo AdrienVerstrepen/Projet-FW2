@@ -1,15 +1,15 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
-import getOneFossil from '@/api/fossilApiEndpoint'
+import { getOneFossil } from '@/api/fossilApiEndpoint'
 import FossilCard from '@/components/FossilCard.vue'
 
 const route = useRoute();
 
 const fossil = ref({})
 
-onMounted(() => {
-    getOneFossil(route.params.name)
+onMounted(async () => {
+    fossil = await getOneFossil(route.params.name)
 })
 </script>
 
