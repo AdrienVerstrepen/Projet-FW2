@@ -11,5 +11,13 @@ export default {
     home: {
         title: 'Home',
         subtitle: 'Super website!'
+    },
+    items: {
+        title: 'All items',
+        fishes: 'Fishes',
+        bugs: 'Bugs',
+        fossils: 'Fossils',
+        gyroids: 'Gyroids',
+        arts: 'Arts',
     }
 }
