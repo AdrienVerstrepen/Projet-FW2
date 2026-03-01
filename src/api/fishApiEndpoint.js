@@ -2,9 +2,7 @@ import nookipediaClient from '@/api/NookipediaApi'
 export const getAllFishes = async () => {
 	try {
 		const response = await nookipediaClient.get("/nh/fish");
-		response.data.forEach(element => {
-            fishes.value.push(element)
-        });
+		return response.data
 	} catch (error) {
 		console.error('Erreur : ', error)
 	}
@@ -13,7 +11,7 @@ export const getAllFishes = async () => {
 export const getOneFish = async (fishName) => {
 	try {
 		const response = await nookipediaClient.get(`/nh/fish/${fishName}`);
-		fish.value = response.data
+		return response.data
 	} catch (error) {
 		console.error('Erreur : ', error)
 	}

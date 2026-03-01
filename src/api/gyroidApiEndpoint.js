@@ -3,9 +3,7 @@ import nookipediaClient from '@/api/NookipediaApi'
 export const getAllGyroids = async () => {
 	try {
 		const response = await nookipediaClient.get("/nh/gyroids");
-		response.data.forEach(element => {
-            gyroides.value.push(element)
-        });
+		return response.data
 	} catch (error) {
 		console.error('Erreur : ', error)
 	}
@@ -14,8 +12,7 @@ export const getAllGyroids = async () => {
 export const getOneGyroid = async (gyroidName) => {
 	try {
 		const response = await nookipediaClient.get(`/nh/gyroids/${gyroidName}`);
-		gyroid.value = response.data
-        console.log(response.data)
+		return response.data
 	} catch (error) {
 		console.error('Erreur : ', error)
 	}
